@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 - Color Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #2d3436;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            transition: all 0.5s ease;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 40px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            transition: color 0.5s ease;
+        }
+        
+        p {
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            line-height: 1.6;
+            transition: color 0.5s ease;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .bg-btn {
+            background: linear-gradient(135deg, #e17055 0%, #d63031 100%);
+            color: white;
+        }
+        
+        .text-btn {
+            background: linear-gradient(135deg, #00cec9 0%, #0984e3 100%);
+            color: white;
+        }
+        
+        .reset-btn {
+            background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <h1 id="heading">Color Changer Application</h1>
+        <p id="paragraph">Click the buttons below to change the background color and text color of this page. Experience the dynamic color transformations!</p>
+        
+        <div class="button-group">
+            <button class="btn bg-btn" onclick="changeBackgroundColor()">Change Background Color</button>
+            <button class="btn text-btn" onclick="changeTextColor()">Change Text Color</button>
+            <button class="btn reset-btn" onclick="resetColors()">Reset Colors</button>
+        </div>
+    </div>
+
+    <script>
+        const backgrounds = [
+            'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+            'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+            'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+            'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+            'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
+        ];
+        
+        const textColors = ['#ffffff', '#ff6b6b', '#48dbfb', '#1dd1a1', '#feca57', '#ff9ff3', '#54a0ff'];
+        
+        function changeBackgroundColor() {
+            const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+            document.getElementById('body').style.background = randomBg;
+        }
+        
+        function changeTextColor() {
+            const randomColor = textColors[Math.floor(Math.random() * textColors.length)];
+            document.getElementById('heading').style.color = randomColor;
+            document.getElementById('paragraph').style.color = randomColor;
+        }
+        
+        function resetColors() {
+            document.getElementById('body').style.background = '#2d3436';
+            document.getElementById('heading').style.color = 'white';
+            document.getElementById('paragraph').style.color = 'white';
+        }
+    </script>
+</body>
+</html>

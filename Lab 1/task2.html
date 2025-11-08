@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Student Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .table-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #2d3436;
+            margin-bottom: 30px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .gpa {
+            font-weight: bold;
+            color: #00b894;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <h2>Student Academic Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>GPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ali Ahmed</td>
+                    <td>Computer Science</td>
+                    <td class="gpa">3.8</td>
+                </tr>
+                <tr>
+                    <td>Sara Khan</td>
+                    <td>Mathematics</td>
+                    <td class="gpa">3.9</td>
+                </tr>
+                <tr>
+                    <td>Mohammad Hassan</td>
+                    <td>Physics</td>
+                    <td class="gpa">3.6</td>
+                </tr>
+                <tr>
+                    <td>Fatima Raza</td>
+                    <td>Chemistry</td>
+                    <td class="gpa">3.7</td>
+                </tr>
+                <tr>
+                    <td>Usman Malik</td>
+                    <td>Biology</td>
+                    <td class="gpa">3.5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
